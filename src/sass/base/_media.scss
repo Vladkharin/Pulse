@@ -2,6 +2,18 @@
     .promo{
         padding: 21px 10px 93px 10px;
     }
+    .consultation{
+        &__descr{
+            padding-left: 5px;
+        }   
+    }
+    .title{
+        font-size: 30px;
+        padding-left: 5px;
+    }
+    .feed-form{
+        padding-left: 25px;
+    }
 }
 @media (max-width: 767px){
     .promo{
@@ -34,11 +46,16 @@
         &_main{
             width: 230px;
         }
+        &_submit{
+            width: 100%;
+        }
     }
     .title{
         font-size: 25px;
+        &_left{
+            font-size: 18px;
+        }
     }
-
     .advantages{
        &__wrapper{
            flex-direction: column;
@@ -58,9 +75,13 @@
         }
         &__subtitle{
             font-size: 20px;
+        } 
+    }
+    .feed-form{
+        width: 326px;
+        input{
+            padding-left: 75px;
         }
-        
-      
     }
     
 }
@@ -76,6 +97,7 @@
             
         }
     }
+
     .promo{
         &__header{
             font-size: 24px;
@@ -89,7 +111,17 @@
             max-width: 320px;
         }
     }
+
     .title{
         font-size: 21px;
+        &_left{
+            font-size: 13px;
+        }
+    }
+
+    .consultation{
+        &__descr{
+            font-size: 13px;
+        }
     }
 }
