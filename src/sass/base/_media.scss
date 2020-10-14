@@ -4,6 +4,7 @@
     }
     .consultation{
         &__descr{
+            font-size: 24px;
             padding-left: 5px;
         }   
     }
@@ -121,7 +122,8 @@
 
     .consultation{
         &__descr{
-            font-size: 13px;
+            font-size:13px;
+            padding-left: 5px;
         }
     }
 }
