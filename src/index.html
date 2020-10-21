@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Pulse</title>
 </head>
 <body>
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="container">
             <header class="header">
                 <a class="header__logo">
@@ -65,7 +66,7 @@
                         <div class="advantages__descr">Наши сотрудники всегда готовы поделиться своим опытом,<br> так как сами бегают полумарафоны, переплыли Босфор, готовятся к соревнованиям по триатлону!</div>
                     </div>
                     <div class="advantages__block">
-                        <img src="icons/heart.png" alt="" class="advantages__icon">
+                        <img src="icons/heart.png" alt="" class="advantages__icon advantages__icon_animated">
                         <div class="advantages__subtitle">Заботимся о здоровье</div>
                         <div class="advantages__descr">Мы работаем для того,<br> чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!</div>
                         </div>
@@ -91,7 +92,7 @@
             </form>
         </div>  
     </section>
-    <section class="carousel">
+    <div class="carousel">
         <div class="container">
             <div class="carousel__inner">
                 <div>
@@ -105,7 +106,7 @@
                 </div>
               </div>
         </div>
-    </section>
+    </div>
     <section class="catalog">
         <div class="container">
             <h2 class="title"> Каталог пульсометров</h2>
@@ -352,7 +353,7 @@
     <section class="message">
         <div class="container">
             <h2 class="title">отзывы клиентов</h2>
-                <div class="message__item">
+                <div class="message__item animate__animated animate__fadeInUp wow" data-wow-duration="2s" data-wow-delay="1s">
                     <img src="img/first.png" alt="" class="message__img">
                     <div class="message__text">
                         <div class="message__title">Ирина Иванченко</div>
@@ -361,8 +362,8 @@
                             Новые цели - новый гаджет! <br><br>Спасибо, RunSmart! </div>
                     </div>
                 </div>
-                <hr>
-                <div class="message__item">
+                
+                <div class="message__item animate__animated animate__fadeInUp wow" data-wow-duration="2s" data-wow-delay="1s">
                     <div class="message__img"><img src="img/second.png" alt=""></div>
                     <div class="message__text">
                         <div class="message__title">Иван Сёмочкин</div>
@@ -373,8 +374,8 @@
                             С ними подготовился к своему первому полумарафону! Спасибо!!!</div>
                     </div>
                 </div>
-                <hr>
-                <div class="message__item">
+                
+                <div class="message__item animate__animated animate__fadeInUp wow" data-wow-duration="2s" data-wow-delay="1s">
                     <div class="message__img"><img src="img/third.png" alt=""></div>
                     <div class="message__text">
                         <div class="message__title">Юлия Дашкина</div>
@@ -430,11 +431,17 @@
             <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
         </div>
     </div>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <a href="#up" class="pageup">
+        <img  src="icons/chevron-circle-up-solid.svg" alt="up">
+    </a>
+    
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

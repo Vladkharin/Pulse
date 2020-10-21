@@ -2,8 +2,8 @@ $(document).ready(function(){
     $('.carousel__inner').slick({
         speed: 1200,
         adaptiveHeight: true,
-        prevArrow:'<button type="button" class="slick-prev"><img src="../icons/chevron-left-solid.svg"></button>',
-        nextArrow:'<button type="button" class="slick-next"><img src="../icons/chevron-right-solid.svg"></button>',
+        prevArrow:'<button type="button" class="slick-prev"><img src="icons/chevron-left-solid.svg"></button>',
+        nextArrow:'<button type="button" class="slick-next"><img src="icons/chevron-right-solid.svg"></button>',
         responsive:[
             {
               breakpoint: 992,
@@ -82,4 +82,35 @@ $(document).ready(function(){
 
     $('input[name=phone]').mask("+7 (999) 999-99-99");
 
+    $('form').submit(function(e) {
+      e.preventDefault();
+      $.ajax({
+          type: "POST",
+          url: "mailer/smart.php",
+          data: $(this).serialize()
+      }).done(function() {
+          $(this).find("input").val("");
+          $('#consultation, #order').fadeOut();
+          $('.overlay, #thanks').fadeIn('slow');
+
+          $('form').trigger('reset');
+      });
+      return false;
+  });
+
+  //smooth scroll and pageup
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 1600) {
+      $('.pageup').fadeIn();
+    }else{
+      $('.pageup').fadeOut();
+    }
+  });
+    $("a[href=#up]").click(function(){
+      const _href = $(this).attr("href");
+      $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+      return false;
+  });
+
+  new WOW().init();
 });
